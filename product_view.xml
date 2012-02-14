@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+  
+        <record model="ir.ui.view" id="product_listinidet_form">
+            <field name="name">product.listinidet.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+                <field name="arch" type="xml">
+	                <notebook position="inside">        
+				  <page string="Listini e Prezzi">
+					<separator string="Listini Articolo" />				  
+				  	<field name="righe_listini" select='2' colspan="4" nolabel="1" string="Listini Articoli">
+				  		<tree editable="bottom">
+				  			<field name="name" size='5' />
+				  			<field name='price_version_id'></field>
+				  			<field name="product_id" size='10' required="True"  />
+				  			<field name="min_quantity" string="Qta Minima" />	    
+				  			<field name="base" string="Riferimento di Calcolo" />	   
+				  			<field name="price_surcharge" string="Prezzo" required="True" />	   				  			
+				  		</tree>				  		
+				  	</field>
+
+				  </page>
+			</notebook>
+
+		  </field>
+        </record>
+    
+ 
+    
+    </data>
+ </openerp>
